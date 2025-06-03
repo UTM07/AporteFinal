@@ -1,0 +1,44 @@
+<ion-content class="bar-content">
+
+  <div class="bar-header">
+    <h1>Su picante</h1>
+    <p class="establecimiento">Establecimiento 3</p>
+    <p class="ubicacion">Facultad de Ciencias Informáticas</p>
+  </div>
+
+  <div class="bar-toolbar">
+    <ion-title class="toolbar-title">Productos</ion-title>
+    <ion-button fill="clear" (click)="irAlCarrito()" class="carrito-btn">
+      <ion-icon name="cart" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="bar-products">
+    <ion-card *ngFor="let producto of productos" class="product-card">
+      <img [src]="producto.imagen" alt="Imagen del producto" class="product-img" />
+
+      <ion-card-header>
+        <ion-card-title class="product-title">{{ producto.nombre }}</ion-card-title>
+        <ion-card-subtitle class="product-price">${{ producto.precio }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p class="descripcion">{{ producto.descripcion }}</p>
+
+        <ion-item lines="none" class="cantidad-input">
+          <ion-label position="stacked">Cantidad</ion-label><br>
+          <ion-input
+            type="number"
+            min="1"
+            [(ngModel)]="producto.cantidad"
+            required
+            class="cantidad-box"
+          ></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="anadirAlCarrito(producto)" class="add-btn">
+          Añadir al carrito
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>

@@ -1,0 +1,69 @@
+.login-content {
+  --background: #5f5f5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+
+  .glass-header {
+    margin-bottom: 2rem;
+
+    .app-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+
+  .glass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .custom-input {
+    --background: #ffffff;
+    --border-radius: 10px;
+    --highlight-color-focused: #6a0dad;
+
+    ion-label {
+      color: #444;
+    }
+
+    ion-input {
+      color: #000;
+    }
+  }
+
+  .custom-button {
+    --background: #6a0dad;
+    --color: #ffffff;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .registro-text {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 0.95rem;
+
+    .registro-link {
+      color: #6a0dad;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

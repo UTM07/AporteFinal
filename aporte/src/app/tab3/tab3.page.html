@@ -1,0 +1,42 @@
+<ion-content class="carrito-content">
+  <!-- Encabezado igual que en tab1 -->
+  <div class="carrito-header">
+    <h1>Carrito</h1>
+    <p>Bar UTM</p>
+  </div>
+
+  <!-- Si hay productos en el carrito -->
+  <div *ngIf="carrito.length > 0; else vacio" class="carrito-body">
+    <ion-card *ngFor="let producto of carrito; let i = index" class="producto-card">
+      <ion-card-header>
+        <ion-card-title>{{ producto.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+        <p><strong>Cantidad:</strong> {{ producto.cantidad }}</p>
+        <ion-button color="danger" fill="outline" size="small" shape="round" (click)="eliminarDelCarrito(i)">
+          Eliminar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="total-card">
+      <ion-card-header>
+        <ion-card-title>Total de productos: {{ totalProductos }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" class="finalizar-btn" (click)="finalizarCompra()">
+          Finalizar compra
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Si el carrito está vacío -->
+  <ng-template #vacio>
+    <div class="carrito-vacio">
+      <ion-icon name="cart-outline" class="icono-vacio"></ion-icon>
+      <p>Tu carrito está vacío.</p>
+    </div>
+  </ng-template>
+</ion-content>

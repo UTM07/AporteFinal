@@ -1,0 +1,7 @@
+{
+  "name": "aporte",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

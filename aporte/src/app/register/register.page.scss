@@ -1,0 +1,86 @@
+.register-content {
+  --background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/img/background.jpg'); // cambia esto si deseas
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.95);
+    z-index: 0;
+  }
+
+  .register-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  }
+
+  .glass-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    .register-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .glass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .custom-input {
+    --background: #ffffff;
+    --highlight-color-focused: #6a0dad;
+    --border-radius: 10px;
+
+    ion-label {
+      color: #444;
+    }
+
+    ion-input,
+    ion-select {
+      color: #000;
+    }
+  }
+
+  .custom-button {
+    --background: #6a0dad;
+    --color: #fff;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .register-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #333;
+
+    .login-link {
+      color: #6a0dad;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
